@@ -1,0 +1,1 @@
+#define INF 65535
