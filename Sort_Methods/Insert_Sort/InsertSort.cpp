@@ -69,8 +69,8 @@ void Insert_Sort_with_half_search(int A[], int n)
 int main()
 {
     int i = 0;
-    int A[] = {25, 40, 16, 38, 77, 64, 53, 88, 9, 48, 98};
-    Insert_Sort(A, 11);
+    int A[] = {0, 25, 40, 16, 38, 77, 64, 53, 88, 9, 48, 98};
+    Insert_Sort_with_half_search(A, 11);
     while (i < 11)
         std::cout << A[i++] << '\t';
 }
