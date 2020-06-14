@@ -2,6 +2,9 @@
 #include <algorithm>
 using namespace std;
 
+// S(n) = O(1)
+// T(n) = O(n^2)
+// unstable
 template <typename T>
 void Select_Sort(T A[], int n)
 {
