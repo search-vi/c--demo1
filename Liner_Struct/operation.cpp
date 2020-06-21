@@ -92,6 +92,14 @@ bool Delete(Linear &L, int i, ElemType &term)
     return true;
 }
 
+ElemType Locate(Linear L, ElemType e)
+{
+    for (int i = 0; i < L.Length; i++)
+        if (e == L.data[i])
+            return i + 1;
+    return -1;
+}
+
 int main()
 {
     Linear L;

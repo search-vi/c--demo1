@@ -1,4 +1,5 @@
 #include "dependence.h"
+#include <iostream>
 
 bool InitQueue(SqQueue &Q)
 {
@@ -25,4 +26,26 @@ bool EnQueue(SqQueue &Q, ElemType x)
     return true;
 }
 
-bool DeQueue(SqQueue &Q, )
+bool DeQueue(SqQueue &Q, ElemType &x)
+{
+    if (Empty(Q))
+        return false;
+    x = Q.data[Q.front];
+    Q.front = (Q.front + 1) % MaxSzie;
+    return true;
+}
+
+bool GetFront(SqQueue Q, ElemType &x)
+{
+    if (Empty(Q))
+        return false;
+    x = Q.data[Q.front];
+    return true;
+}
+
+int Num(SqQueue Q)
+{
+    return (Q.rear - Q.front + MaxSzie) % MaxSzie;
+}
+
+int
